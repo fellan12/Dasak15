@@ -1,0 +1,42 @@
+--------------------------------------------------------------------------------------------------
+What commands did you use for importing, checking and signing the key?
+--------------------------------------------------------------------------------------------------
+For importing we used: gpg --import [file]
+
+For checking we used: gpg -fingerprint
+then check with the fingerprint on the website.
+
+For signing we created a keyring with "gpg --gen-key" and then signed the with the generated key.
+
+--------------------------------------------------------------------------------------------------
+If you would not trust the fingerprint information on the course website but you would trust Sonja
+Buchegger’s key (available form the course website but also from her personal website), what steps
+and commands would you need to perform to check the course key’s validity?
+--------------------------------------------------------------------------------------------------
+Verify fingerprint?
+Verify signature?
+
+--------------------------------------------------------------------------------------------------
+What is the difference between a normal and a local key signature?
+--------------------------------------------------------------------------------------------------
+Local key signature is a signature that is one available locally on the computer and is lost if the 
+key is sent to another computer.
+
+Normal key signature is a signature that is kept even after it is sent to another computer.
+
+--------------------------------------------------------------------------------------------------
+What command did you use to generate the keypair?
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+Which identity/identities are assigned to the key?
+--------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------
+What is the fingerprint of your key?
+--------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------
+What subkey(s) are attached to your key? What is the purpose of the subkeys?
+--------------------------------------------------------------------------------------------------

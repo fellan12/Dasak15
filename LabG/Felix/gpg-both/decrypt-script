@@ -1,0 +1,22 @@
+rm *.txt.decrypt
+rm decrypted.txt
+rm encrypted.gpg
+
+for f in file*.txt; do
+    printf "#################################################################################################\n\n"
+    echo checking $(basename "$f")
+  if gpg --decrypt $f; then
+      printf "#################################################################################################\n\n"
+   	gpg --output $f".decrypt" --decrypt $f
+   	echo $(basename "$f") is good
+    head -4 $f | tail -1
+  fi
+done
+
+
+cat *.txt.decrypt >> decrypted.txt
+
+more decrypted.txt
+
+
+gpg --armor --sign --output encrypted.gpg --encrypt decrypted.txt

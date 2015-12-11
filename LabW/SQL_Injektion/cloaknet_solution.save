@@ -1,0 +1,21 @@
+Log onto cloaknet
+
+when at the frontpage, refresh the page and capture the request using burp.
+
+In the request header params-tab there is a cookie called userid, there I injected the script.
+
+-71934/**/unUNIONion/**/seSELECTlect/**/*/**/from/**/users
+
+The way I came up with the script is that i first negated the original id by adding a "-" at the start
+then i needed to inject the and any whitespace looked like it got changed to some url encoding
+ or something so i used /**/ comment as space. 
+
+the reason to why i wrote UNION as unUNIONion is because i though that the filter removed keyword
+such as select, union, from. So i tried all the combinations to find which would work.
+
+when i got that to work i needed to find the correct table with all the users. 
+So i tired username, user, profil, profiles, logs and then users. And that worked. logs seems to work
+too but not here.
+
+So this is the solution for the SQL injection.
+-71934/**/unUNIONion/**/seSELECTlect/**/*/**/from/**/users
